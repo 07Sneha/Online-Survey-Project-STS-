@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" th:href="@{/webjars/bootstrap/5.5.3/css/bootstrap.min.css}" />
+    <!-- Add any additional CSS or resources here -->
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" th:href="@{/admin/home}">Online Survey Portal</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" th:href="@{/admin/home}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" th:href="@{/admin/add-survey}">Add Survey</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" th:href="@{/admin/view-survey}">View Survey</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" th:href="@{/admin/survey-reports}">Survey Reports</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" th:href="@{/admin/add-participants}">Add Participants</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+   <h1>
+       Welcome to admin dashboard</h1>
+    <script th:src="@{/webjars/bootstrap/5.5.3/js/bootstrap.min.js}"></script>
+    <!-- Add any additional JavaScript or resources here -->
+</body>
+</html>

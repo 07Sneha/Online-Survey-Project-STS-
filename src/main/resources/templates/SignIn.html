@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Sign In - Online Survey Portal</title>
+    <!-- Include Bootstrap CSS (assuming you have it configured as mentioned earlier) -->
+    <link th:href="@{/webjars/bootstrap/5.5.3/css/bootstrap.min.css}" rel="stylesheet" />
+</head>
+<body>
+    <!-- Content container -->
+    <div class="container mt-5">
+        <h2>Sign In</h2>
+        <form th:action="@{/Signin}" method="post">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" class="form-control" id="username" name="username" required />
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" id="password" name="password" required />
+            </div>
+            <button type="submit" class="btn btn-primary">Sign In</button>
+        </form>
+        <p th:if="${param.error}" class="text-danger mt-2">Invalid username or password</p>
+        <br>
+        <br>
+        <p th:if="${param.logout}" class="text-danger mt-2" style="font-size: 14px; text-align: center;">
+                   You have been successfully logged out.
+               </p>
+    </div>
+
+
+</body>
+</html>

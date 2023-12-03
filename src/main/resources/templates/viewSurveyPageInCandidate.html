@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <!-- Add your head content here -->
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <!-- Navbar content here -->
+    </nav>
+
+    <h1>Welcome to Participants dashboard</h1>
+
+    <div class="container">
+        <h2>Available Surveys</h2>
+        <ul>
+            <li th:each="survey : ${surveys}">
+                <a th:href="@{'/candidate/answer-survey/' + survey.id}" th:text="${survey.name}"></a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Add your script imports here -->
+</body>
+</html>

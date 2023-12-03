@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Participant</title>
+</head>
+<body>
+    <h1>Add New Participant</h1>
+    
+    <!-- Form to enter participant details -->
+    <form th:action="@{/admin/add-participant}" method="post">
+		
+		<label for="firstName">FirstName:</label>
+        <input type="text" id="firstName" name="firstName" required>
+		
+		<label for="lastName">LastName:</label>
+        <input type="text" id="lastName" name="lastName" required>
+		
+		<label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+		
+		<label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+			
+        <label for="email">Authority:</label>
+        <input type="text" id="authority" name="authority" required>
+        
+        <label for="email">Priority:</label>
+        <input type="text" id="Priority" name="Priority" required>
+        
+        <button type="submit">Add Participant</button>
+    </form>
+    
+    <!-- Display error message if email already exists -->
+    <p th:if="${param.duplicate}" class="text-danger mt-2">
+		The email address you entered is already associated with another participant.
+		 Please provide a unique email address.
+	</p>
+	
+</body>
+</html>

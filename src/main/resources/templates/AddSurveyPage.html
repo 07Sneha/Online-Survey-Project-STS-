@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Survey</title>
+    <!-- Include Bootstrap or other CSS -->
+</head>
+<body>
+    <!-- Navigation Bar (if you're using a shared layout) -->
+    
+    <div class="container">
+        <h2>Add New Survey</h2>
+        <form th:action="@{/admin/add-survey}" method="post">
+            <div class="form-group">
+                <label for="surveyName">Survey Name:</label>
+                <input type="text" id="surveyName" name="surveyName" required>
+            </div>
+            <div class="form-group">
+                <label for="surveyDescription">Survey Description:</label>
+                <input type="text" id="surveyDescription" name="surveyDescription">
+            </div>
+            <div class="form-group">
+                <label for="surveyedBy">Surveyed By:</label>
+                <input type="text" id="surveyedBy" name="surveyedBy" required>
+            </div>
+             <div class="form-group">
+                <label for="q1">Enter participant Name</label>
+                <input type="text" id="participant Name" name="participant Name" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="q1">Question 1:</label>
+                <input type="text" id="q1" name="q1" required>
+            </div>
+           <div class="form-group">
+                <label for="q1">Question 2:</label>
+                <input type="text" id="q2" name="q2" required>
+            </div>
+            <div class="form-group">
+                <label for="q1">Question 3:</label>
+                <input type="text" id="q3" name="q3" required>
+            </div>
+            <div class="form-group">
+                <label for="q1">Question 4:</label>
+                <input type="text" id="q4" name="q4" required>
+            </div>
+            
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

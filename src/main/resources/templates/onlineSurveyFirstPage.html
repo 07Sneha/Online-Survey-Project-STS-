@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Welcome to Online Survey Portal</title>
+    <!-- Include Bootstrap CSS (assuming you have it configured as mentioned earlier) -->
+    <link th:href="@{/webjars/bootstrap/5.5.3/css/bootstrap.min.css}" rel="stylesheet" />
+</head>
+<body>
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="/onlineSurveyPage">Online Survey Portal</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">          
+                     <a class="nav-link" href="/Signin">Sign In</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Content container -->
+    <div class="container mt-5">
+        <h1 class="display-4">Welcome to Online Survey Portal</h1>
+    </div>
+</body>
+</html>

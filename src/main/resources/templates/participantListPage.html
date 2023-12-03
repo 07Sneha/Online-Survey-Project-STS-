@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Participant List</title>
+</head>
+<body>
+	
+	<nav>
+    <ul>
+        <li><a th:href="@{/admin/home}">Home</a></li>
+        <li><a th:href="@{/admin/add-participant}">Add New Participant</a></li>
+    </ul>
+  </nav>
+    <h1>Participant List</h1>
+    <table>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>Priority</th>
+            <th>Authority</th>
+            <th>Actions</th>
+        </tr>
+        <!-- Loop through participants and display them -->
+        <tr th:each="participant : ${participants}">
+            <td th:text="${participant.firstName}"></td>
+            <td th:text="${participant.lastName}"></td>
+            <td th:text="${participant.email}"></td>
+            <td th:text="${participant.priority}"></td>
+            <td th:text="${participant.authority}"></td>
+            <td>
+                <a th:href="@{/admin/update-participant/{id}(id=${participant.id})}">Update</a>
+                <a th:href="@{/admin/delete-participant/{id}(id=${participant.id})}">Delete</a>
+           </td>
+        </tr>
+    </table>
+</body>
+</html>
